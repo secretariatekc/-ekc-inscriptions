@@ -207,69 +207,80 @@
 var APPS_SCRIPT_URL = "VOTRE_URL_APPS_SCRIPT_ICI";
 
 var GROUPES = [
-  {id:"u5lun",  cat:"U5",      nom:"Lundi 16h30-17h30",                                                    places:8,  inscrits:0, invite:false},
+  // U5
+  {id:"u5lun",  cat:"U5",      nom:"Lundi 16h30-17h30",                                                     places:8,  inscrits:0, invite:false},
   {id:"u5jeu",  cat:"U5",      nom:"Jeudi 16h-17h",                                                         places:8,  inscrits:0, invite:false},
+  // U7
+  {id:"u7lun",  cat:"U7",      nom:"Lundi 16h30-17h15",                                                     places:8,  inscrits:0, invite:false},
   {id:"u7mar",  cat:"U7",      nom:"Mardi multi-activite 17h15-18h30",                                      places:8,  inscrits:0, invite:false},
   {id:"u7mer",  cat:"U7",      nom:"Mercredi 9h-10h15",                                                     places:8,  inscrits:0, invite:false},
-  {id:"u9merm", cat:"U9",      nom:"Mercredi multi-activite 10h45-12h",                                     places:10, inscrits:0, invite:false},
+  // U9
+  {id:"u9mar",  cat:"U9",      nom:"Mardi 16h00-17h30",                                                     places:10, inscrits:0, invite:false},
+  {id:"u9merm", cat:"U9",      nom:"Mercredi multi-activite 10h45-12h00",                                   places:10, inscrits:0, invite:false},
   {id:"u9mer2", cat:"U9",      nom:"Mercredi 13h15-14h45",                                                  places:10, inscrits:0, invite:false},
-  {id:"u9ven",  cat:"U9",      nom:"Vendredi 16h-17h30",                                                    places:10, inscrits:0, invite:false},
-  {id:"u11mm",  cat:"U11",     nom:"Mercredi multi-activite 9h-10h45",                                      places:12, inscrits:0, invite:false},
+  {id:"u9ven",  cat:"U9",      nom:"Vendredi 16h00-17h30",                                                  places:10, inscrits:0, invite:false},
+  // U11
+  {id:"u11lun", cat:"U11",     nom:"Lundi 17h00-18h45",                                                     places:12, inscrits:0, invite:false},
+  {id:"u11mm",  cat:"U11",     nom:"Multiactivite Mercredi 9h00-10h45",                                     places:12, inscrits:0, invite:false},
   {id:"u11m2",  cat:"U11",     nom:"Mercredi 10h30-12h15",                                                  places:12, inscrits:0, invite:false},
   {id:"u11m3",  cat:"U11",     nom:"Mercredi 14h45-16h30",                                                  places:12, inscrits:0, invite:false},
+  // U13/15
   {id:"u13lun", cat:"U13",     nom:"Lundi 17h15-19h15",                                                     places:14, inscrits:0, invite:false},
   {id:"u13mar", cat:"U13",     nom:"Mardi 17h30-19h30",                                                     places:14, inscrits:0, invite:false},
   {id:"u13ven", cat:"U13",     nom:"Vendredi 17h15-19h15",                                                  places:14, inscrits:0, invite:false},
+  // U15/17/19
   {id:"u19lun", cat:"U19",     nom:"Lundi 17h30-19h30",                                                     places:16, inscrits:0, invite:false},
   {id:"u19mer", cat:"U19",     nom:"Mercredi 16h30-18h30",                                                  places:16, inscrits:0, invite:false},
   {id:"u19ven", cat:"U19",     nom:"Vendredi 17h30-19h30",                                                  places:16, inscrits:0, invite:false},
-  {id:"perf",   cat:"PERF",    nom:"Mardi et Jeudi - toutes categories",                                    places:16, inscrits:0, invite:true},
+  // Sur invitation
+  {id:"perf",   cat:"PERF",    nom:"Mardi et Jeudi U7/U15 2H",                                              places:16, inscrits:0, invite:true},
   {id:"compete",cat:"COMPETE", nom:"Mercredi 13h30-16h / Jeudi 17h-19h / Samedi 8h30-11h",                 places:12, inscrits:0, invite:true},
-  {id:"elites", cat:"ELITES",  nom:"Lundi 17h-20h / Mercredi 15h-18h / Vendredi 17h-20h / Samedi 10h-13h",places:18, inscrits:0, invite:true},
-  {id:"adultes",cat:"ADULTES", nom:"Lundi, Mardi, Jeudi 19h-21h30 / Vendredi 18h-21h",                     places:35, inscrits:0, invite:false}
+  {id:"elites", cat:"ELITES",  nom:"Lundi 17h-20h / Mercredi 15h-18h / Vendredi 17h-20h / Samedi 10h-13h", places:18, inscrits:0, invite:true},
+  // Adultes
+  {id:"adultes",cat:"ADULTES", nom:"Lundi/Mardi/Jeudi 19h-21h30 / Vendredi 18h-21h",                       places:35, inscrits:0, invite:false}
 ];
 
 var ESSAIS = {
-  "U5":  [
-    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7"},
-    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7"},
-    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7"},
-    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7"}
+  "U5": [
+    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7",       ligneDebut:16},
+    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7",       ligneDebut:4},
+    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7",           ligneDebut:6},
+    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7",             ligneDebut:2}
   ],
-  "U7":  [
-    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7"},
-    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7"},
-    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7"},
-    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7"},
-    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7"},
-    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7"}
+  "U7": [
+    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7",       ligneDebut:16},
+    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7",       ligneDebut:28},
+    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7",       ligneDebut:4},
+    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7",           ligneDebut:6},
+    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7",             ligneDebut:2},
+    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7",       ligneDebut:39}
   ],
-  "U9":  [
-    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11"},
-    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7"},
-    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11"},
-    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11"},
-    {date:"Mercredi 26 aout", heure:"10h15 - 11h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 10h15/11h15 U9"},
-    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7"}
+  "U9": [
+    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11",         ligneDebut:6},
+    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7",       ligneDebut:28},
+    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11",      ligneDebut:17},
+    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11",          ligneDebut:18},
+    {date:"Mercredi 26 aout", heure:"10h15 - 11h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 10h15/11h15 U9",           ligneDebut:13},
+    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7",       ligneDebut:39}
   ],
   "U11": [
-    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11"},
-    {date:"Mercredi 19 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 19", creneau:"MERCREDI 14h15/15H15 U11"},
-    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11"},
-    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11"},
-    {date:"Mercredi 26 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 13h00/14h00 U11"}
+    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11",         ligneDebut:6},
+    {date:"Mercredi 19 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 19", creneau:"MERCREDI 14h15/15H15 U11",         ligneDebut:42},
+    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11",      ligneDebut:17},
+    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11",          ligneDebut:18},
+    {date:"Mercredi 26 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 13h00/14h00 U11",          ligneDebut:25}
   ],
   "U13": [
-    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"},
-    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19"},
-    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19"},
-    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"}
+    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19", ligneDebut:53},
+    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19", ligneDebut:29},
+    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19",  ligneDebut:30},
+    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19", ligneDebut:51}
   ],
   "U19": [
-    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"},
-    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19"},
-    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19"},
-    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"}
+    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19", ligneDebut:53},
+    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19", ligneDebut:29},
+    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19",  ligneDebut:30},
+    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19", ligneDebut:51}
   ]
 };
 
@@ -277,14 +288,14 @@ var S = {nom:"",prenom:"",ddn:"",sexe:"",type:"",tel:"",email:"",cat:"",groupe:n
 
 function getCategorie(ddn){
   var an = new Date(ddn).getFullYear();
-  var age = 2026 - an;
-  if(age<=6) return "U5";
-  if(age<=8) return "U7";
-  if(age<=10) return "U9";
-  if(age<=12) return "U11";
-  if(age<=14) return "U13";
-  if(an>=2008) return "U19";
-  return "ADULTES";
+  if(an === 2023) return "U5";
+  if(an === 2021 || an === 2022) return "U7";
+  if(an === 2019 || an === 2020) return "U9";
+  if(an === 2017 || an === 2018) return "U11";
+  if(an === 2014 || an === 2015 || an === 2016) return "U13";
+  if(an >= 2009 && an <= 2013) return "U19";
+  if(an <= 2008) return "ADULTES";
+  return "U5"; // 2024 et apres = trop jeune, on met U5 par defaut
 }
 function places(g){return Math.max(0,g.places-g.inscrits);}
 function posAttente(g){return g.inscrits-g.places+1;}
