@@ -204,7 +204,7 @@
 </div>
 
 <script>
-var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxki1Mkl3KstUelIx0phrgdGZTuCkoEfMq_25YSAJbGI0u0HRMpFckNm5cQVlPudxLswQ/exec";
+var APPS_SCRIPT_URL = "VOTRE_URL_APPS_SCRIPT_ICI";
 
 var GROUPES = [
   {id:"u5lun",  cat:"U5",      nom:"Lundi 16h30-17h30",                                                    places:8,  inscrits:0, invite:false},
@@ -230,12 +230,47 @@ var GROUPES = [
 ];
 
 var ESSAIS = {
-  "U5":  [{date:"Mercredi 19 aout",heure:"9h00 - 10h00"},{date:"Mercredi 26 aout",heure:"10h15 - 11h15"},{date:"Vendredi 28 aout",heure:"16h00 - 17h00"}],
-  "U7":  [{date:"Mercredi 19 aout",heure:"9h00 - 10h00"},{date:"Mercredi 26 aout",heure:"10h15 - 11h15"},{date:"Vendredi 28 aout",heure:"16h00 - 17h00"}],
-  "U9":  [{date:"Mercredi 19 aout",heure:"10h15 - 11h15"},{date:"Mercredi 26 aout",heure:"13h00 - 14h00"},{date:"Jeudi 27 aout",heure:"17h00 - 18h00"}],
-  "U11": [{date:"Mercredi 19 aout",heure:"13h00 - 14h00"},{date:"Mercredi 26 aout",heure:"9h00 - 10h00"}],
-  "U13": [{date:"Mercredi 19 aout",heure:"14h30 - 16h00"},{date:"Mercredi 26 aout",heure:"15h00 - 16h30"},{date:"Vendredi 28 aout",heure:"17h15 - 18h30"}],
-  "U19": [{date:"Mercredi 19 aout",heure:"14h30 - 16h00"},{date:"Mercredi 26 aout",heure:"15h00 - 16h30"},{date:"Vendredi 28 aout",heure:"17h15 - 18h30"}]
+  "U5":  [
+    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7"},
+    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7"},
+    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7"},
+    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7"}
+  ],
+  "U7":  [
+    {date:"Mercredi 19 aout", heure:"10h30 - 11h30", onglet:"ESSAIS DU 19", creneau:"MERCREDI 10h30/11h30 U5/U7"},
+    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7"},
+    {date:"Vendredi 21 aout", heure:"16h00 - 17h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 16h00/17h00 U5/U7"},
+    {date:"Lundi 24 aout",    heure:"16h00 - 17h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 16h00/17h00 U5/U7"},
+    {date:"Mercredi 26 aout", heure:"9h00 - 10h00",  onglet:"ESSAIS DU 26", creneau:"MERCREDI 9h-10h U5/U7"},
+    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7"}
+  ],
+  "U9":  [
+    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11"},
+    {date:"Mercredi 19 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 13h00/14h00 U9/U7"},
+    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11"},
+    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11"},
+    {date:"Mercredi 26 aout", heure:"10h15 - 11h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 10h15/11h15 U9"},
+    {date:"Mercredi 26 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 26", creneau:"MERCREDI 14h15/15H15 U9/U7"}
+  ],
+  "U11": [
+    {date:"Mercredi 19 aout", heure:"9h00 - 10h15",  onglet:"ESSAIS DU 19", creneau:"MERCREDI 9h-10h15 U9/U11"},
+    {date:"Mercredi 19 aout", heure:"14h15 - 15h15", onglet:"ESSAIS DU 19", creneau:"MERCREDI 14h15/15H15 U11"},
+    {date:"Vendredi 21 aout", heure:"17h00 - 18h00", onglet:"ESSAIS DU 21", creneau:"VENDREDI 17h00/18h00 U9/U11"},
+    {date:"Lundi 24 aout",    heure:"17h00 - 18h00", onglet:"ESSAIS DU 24", creneau:"LUNDI 17h00/18h00 U9/U11"},
+    {date:"Mercredi 26 aout", heure:"13h00 - 14h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 13h00/14h00 U11"}
+  ],
+  "U13": [
+    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"},
+    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19"},
+    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19"},
+    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"}
+  ],
+  "U19": [
+    {date:"Mercredi 19 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 19", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"},
+    {date:"Vendredi 21 aout", heure:"18h15 - 19h30", onglet:"ESSAIS DU 21", creneau:"VENDREDI 18h15/19h30 U13/U15/U17/U19"},
+    {date:"Lundi 24 aout",    heure:"18h15 - 19h30", onglet:"ESSAIS DU 24", creneau:"LUNDI 18h15/19h30 U13/U15/U17/U19"},
+    {date:"Mercredi 26 aout", heure:"15h30 - 17h00", onglet:"ESSAIS DU 26", creneau:"MERCREDI 15H30-17h00 U13/15/U17/U19"}
+  ]
 };
 
 var S = {nom:"",prenom:"",ddn:"",sexe:"",type:"",tel:"",email:"",cat:"",groupe:null,intention:null,choix:null,groupeFinal:null,statut:"",essai:null};
@@ -366,7 +401,7 @@ function buildConf(){
     creneaux.forEach(function(c){
       var div=document.createElement("div");div.className="ropt";
       div.innerHTML='<div class="rdot"></div><div><div style="font-size:0.85rem;font-weight:500">'+c.date+'</div><div style="font-size:0.78rem;color:var(--gray-600);margin-top:2px">'+c.heure+'</div></div>';
-      div.onclick=function(){document.querySelectorAll("#essai-opts .ropt").forEach(function(o){o.classList.remove("selected");});div.classList.add("selected");S.essai=c.date+" - "+c.heure;};
+      div.onclick=function(){document.querySelectorAll("#essai-opts .ropt").forEach(function(o){o.classList.remove("selected");});div.classList.add("selected");S.essai=c.date+" - "+c.heure;S.essaiOnglet=c.onglet||"";S.essaiCreneau=c.creneau||"";};
       essaiOpts.appendChild(div);
     });
   } else {essaiSec.style.display="none";}
@@ -392,6 +427,8 @@ function envoyer(){
     groupe:gf.nom, groupeId:gf.id,
     statut:S.statut,
     essai:S.essai||"",
+    essaiOnglet:S.essaiOnglet||"",
+    essaiCreneau:S.essaiCreneau||"",
     estPlaceConfirmee:ok,
     estInvitation:gf.invite||false
   };
@@ -408,7 +445,7 @@ function envoyer(){
 }
 
 function reset(){
-  S={nom:"",prenom:"",ddn:"",sexe:"",type:"",tel:"",email:"",cat:"",groupe:null,intention:null,choix:null,groupeFinal:null,statut:"",essai:null};
+  S={nom:"",prenom:"",ddn:"",sexe:"",type:"",tel:"",email:"",cat:"",groupe:null,intention:null,choix:null,groupeFinal:null,statut:"",essai:null,essaiOnglet:"",essaiCreneau:""};
   ["nom","prenom","ddn","tel","email"].forEach(function(id){document.getElementById(id).value="";});
   ["sexe-m","sexe-f","type-nouveau","type-reinscription"].forEach(function(id){document.getElementById(id).classList.remove("selected");});
   document.getElementById("intention-wrap").style.display="none";
